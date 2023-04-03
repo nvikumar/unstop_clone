@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unstop Clone</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+</head>
+<style>
+    .body {
+        font-family: 'ubuntu';
+        margin: 0px;
+        padding: 0px;
+    }
+
+    header {
+        /* border: 2px solid green; */
+        /* position: fixed; */
+    }
+
+    .logo,
+    .search,
+    .nav {
+        /* border: 2px solid red; */
+        display: inline-block;
+    }
+
+    .logo {
+        position: relative;
+        top: 16px;
+        cursor: pointer;
+    }
+
+    .nav {
+        position: realtive;
+        right: 10px;
+        top: 10px;
+    }
+
+    header img {
+        width: 180px;
+    }
+
+    .search {
+        margin: 2px;
+        position: relative;
+        top: 1px;
+    }
+
+    .search input {
+        width: 240px;
+        height: 35px;
+        font-family: "ubuntu";
+        font-size: 20px;
+        font-display: blue;
+        border-radius: 5px;
+    }
+
+    .navbar li {
+        display: inline-block;
+        font-size: 16px;
+    }
+
+    .navbar li a {
+        text-decoration: none;
+        color: rgb(45, 45, 72);
+        padding: 30px 10px;
+        font-family: "ubuntu";
+    }
+    .navbar li a:hover {
+        text-decoration: none;
+        color: rgb(0, 115, 230);
+        font-size: 18px;
+    }
+
+    .navbar .btn1 {
+        padding: 9px 25px;
+        margin: 0px 5px;
+        background-color: rgb(28, 73, 128);
+        color: white;
+        border-radius: 30px;
+        font-size: 14px;
+    }
+
+    .navbar .btn2 {
+        padding: 9px 25px;
+        margin: 0px 5px;
+        background-color: rgb(0, 115, 230);
+        color: white;
+        font-size: 14px;
+        border-radius: 30px;
+    }
+    
+    .navbar .btn2:hover,.navbar .btn1:hover{
+        font-size: 16px;
+        border-radius: 50px;
+        filter: brightness(1.4);
+        cursor: pointer;
+        
+    }
+    .navbar li img {
+        width: 40px;
+        position: absolute;
+        top: 31px;
+        right: 10px;
+    }
+    .navbar li img:hover {
+        filter: invert(50%);
+        cursor: pointer;
+
+    }
+
+    .ctn1 .left {
+        /* border: 2px solid red; */
+        font-family: 'ubuntu';
+        color: rgb(28, 73, 128);
+        padding-left: 70px;
+        font-size: 25px;
+        display: inline-block;
+        padding-top: 20px;
+        width:44%;
+
+    }
+
+    .ctn1 {
+        /* border: 2px solid brown; */
+        height: 500px;
+    }
+
+    .ctn1 .left p,
+    .ctn1 .left h1,
+    .ctn1 .left h2 {
+        margin-bottom: 0px;
+        text-decoration: none;
+        
+    }
+    /* .ctn1 .left h1 */
+
+    .ctn1 .left hr {
+        display: inline-block;
+        width: 190px;
+        background-color: yellow;
+        height: 2px;
+    }
+
+    .ctn1 .right {
+        position: absolute;
+        right: 15px;
+        top: 110px;
+        display: flex;
+        gap: 30px;
+        /* border: 2px solid red; */
+        width: 530px;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+
+    .ctn1 .right img {
+        width: 170px;
+        /* border: 2px solid green; */
+        border-radius: 10px;
+    }
+    .ctn1 .right img:hover {
+        filter: invert(10%);
+        /* border: 2px solid green; */
+        border-radius: 20px;
+        cursor: pointer;
+    }
+
+    .ctn1 .right .Firstrow,
+    .ctn1 .right .secondrow {
+        display: inline-block;
+    }
+    .ctn2 img{
+        width: 1360px;
+    }
+    .ctn3 img{
+        width: 1000px;
+        display: block;
+        margin:auto;
+        cursor: pointer;
+    }
+    .ctn4 img,.ctn5 img,.ctn6 img{
+        width: 1240px;
+        display: block;
+        margin:auto;
+        /* cursor: pointer; */
+    }
+    /* .ctn5 img{
+    } */
+    .ctn6 img{
+        width: 1000px;
+        display: block;
+        padding: 60px 0px;
+        margin:auto;
+        cursor: pointer;
+    }
+    .ctn8 img{
+        width: 1200px;
+        display: block;
+        padding-top: 30px;
+        margin:auto;
+        /* cursor: pointer; */
+    }
+    .ctn10 img{
+        width: 1200px;
+        display: block;
+        padding-top: 6px;
+        margin:auto;
+        /* cursor: pointer; */
+    }
+    .ctn3 img:hover{
+        width: 1000px;
+        display: block;
+        margin:auto;
+    }
+    footer .ftr{
+        /* border: 2px solid red; */
+        position: relative;
+        margin: auto;
+        width: 20%;
+    }
+    .ftr a,.ftr a:hover{
+        color:black;
+        text-decoration: none;
+        font-family: 'ubuntu';
+
+    }
+</style>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/Logo.png" alt="">
+
+        </div>
+        <div class="search">
+            <form action="noation.php">
+                <input type="text" placeholder="search opportunities: ">
+                <!-- <div>
+                    <input type="submit" value="Submit Now">
+                    <input type="reset" value="Reset Now">
+                </div> -->
+            </form>
+        </div>
+        <div class="nav">
+            <ul class="navbar">
+                <li><a href="#" class="active">Learn</a></li>
+                <li><a href="#">Practice</a></li>
+                <li><a href="#">Compete</a></li>
+                <li><a href="#">Mentorship</a></li>
+                <li><a href="#">Jobs</a></li>
+                <button class="btn1">Host</button>
+                <button class="btn2">Login</button>
+                <li><img src="img/Hamburger.png" alt=""></li>
+            </ul>
+        </div>
+        <hr>
+        <u>
+    </header>
+    <div class="ctn1">
+        <div class="left">
+            <h1>Connecting</h1>
+            <h2>Talent,Colleges,<br>
+                Recruiters</h2>
+            <br>
+            <hr>
+
+            <p>
+                Explore opportunities from across the globe to learn,<br>
+                showcase skills, gain CV points, &amp; get hired by your<br>
+                dream company.<br>
+            </p>
+        </div>
+        <div class="right">
+            <div class="Firstrow">
+
+                <img src="img/c11 home-hero-learn.jpg" alt="" text="Learn"> 
+                <img src="img/c12 home-hero-practice.jpg" alt="">
+                <img src="img/c13 home-hero-mentorships.jpg" alt="">
+            </div>
+            <div class="secondrow">
+
+                <img src="img/c14 home-hero-compete.jpg" alt="">
+                <img src="img/c15 home-hero-jobs.jpg" alt="">
+                <img src="img/c16 home-hero-blogs.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="ctn2">
+        <hr>
+        <img src="img/c2.png" alt="">
+    <hr>
+    </div>
+    <div class="ctn3">
+        <img src="img/c3.png" alt="">
+    </div>
+    <div class="ctn4">
+        <img src="img/c4.png" alt="">
+    </div>
+    <div class="ctn5">
+        <img src="img/c5.png" alt="">
+    </div>
+    <div class="ctn6">
+        <hr>
+        <img src="img/c6.jpg" alt="">
+        <hr>
+    </div>
+    <div class="ctn8">
+        <img src="img/c8.png" alt="">
+    </div>
+    <div class="ctn10">
+        <img src="img/c10.png" alt="">
+    </div>
+    <footer>
+        
+        <div class="ftr">
+           <a href="https://www.linkedin.com/in/nvikumar/">made with ♥ by Naveen Kumar.</a>
+        </div>
+    </footer>
+</body>
+
+</html>
